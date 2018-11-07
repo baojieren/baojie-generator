@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'com.baojie'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'com.baomidou', name: 'mybatis-plus', version: '3.0.5'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '5.1.45'
+    compile group: 'org.springframework', name: 'spring-core', version: '5.0.8.RELEASE'
+    compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.25'
+    compile group: 'org.apache.velocity', name: 'velocity-engine-core', version: '2.0'
+}
