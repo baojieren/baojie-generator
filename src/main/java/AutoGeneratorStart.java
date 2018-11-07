@@ -20,10 +20,13 @@ public class AutoGeneratorStart {
                                 .setOutputDir("D:\\generator-code")
                                 .setFileOverride(true)
                                 .setEnableCache(false)
-                                .setAuthor("baojie")
+                                .setAuthor("renBaoJie")
                                 .setBaseResultMap(true)
                                 .setIdType(IdType.AUTO)
-                                .setServiceName("%sService")
+                                .setBaseColumnList(true)
+                                .setEntityName("%sPO")
+                                .setMapperName("I%sDao")
+                                //.setServiceName("%sService")
                 )
                 //数据源配置
                 .setDataSource(
@@ -38,14 +41,23 @@ public class AutoGeneratorStart {
                 .setStrategy(
                         new StrategyConfig()
                                 .setNaming(NamingStrategy.underline_to_camel)
+                                .setTablePrefix("t_")
+                                .setEntityLombokModel(true)
+                                .setEntityBooleanColumnRemoveIsPrefix(true)
+                                .setRestControllerStyle(true)
                                 //.setLogicDeleteFieldName("state")
                                 .setInclude("t_vendor_log_count")
                 )
                 //包配置
                 .setPackageInfo(
                         new PackageConfig()
-                                .setParent("com.baojie")
+                                .setParent("com.bjs")
+                                .setEntity("data.po")
+                                .setService("service.service")
+                                .setServiceImpl("service.service.impl")
+                                .setMapper("data.dao")
                                 .setXml("mapper")
+                                .setController("web")
                 )
                 //go
                 .execute();
