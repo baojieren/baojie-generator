@@ -35,7 +35,7 @@ public class AutoGeneratorStart {
                                 .setUsername("root")
                                 .setPassword("Mysql615243!")
                                 .setDriverName("com.mysql.jdbc.Driver")
-                                .setUrl("jdbc:mysql://119.29.239.91:3306/baojie?serverTimezone=CST&allowMultiQueries=true")
+                                .setUrl("jdbc:mysql://119.29.239.91:3306/baojie?serverTimezone=CST&useSSL=false&allowMultiQueries=true")
                 )
                 //表策略配置
                 .setStrategy(
