@@ -17,7 +17,7 @@ public class AutoGeneratorStart {
                 //全局配置
                 .setGlobalConfig(
                         new GlobalConfig()
-                                .setOutputDir("D:\\generator-code")
+                                .setOutputDir("D:\\generator-baojie")
                                 .setFileOverride(true)
                                 .setEnableCache(false)
                                 .setAuthor("renBaoJie")
@@ -32,10 +32,10 @@ public class AutoGeneratorStart {
                 .setDataSource(
                         new DataSourceConfig()
                                 .setDbType(DbType.MYSQL)
-                                .setUsername("cimi")
-                                .setPassword("cimi123!")
+                                .setUsername("root")
+                                .setPassword("Mysql615243!")
                                 .setDriverName("com.mysql.jdbc.Driver")
-                                .setUrl("jdbc:mysql://112.74.84.5:3306/bjs?serverTimezone=CST")
+                                .setUrl("jdbc:mysql://119.29.239.91:3306/baojie?serverTimezone=CST&allowMultiQueries=true")
                 )
                 //表策略配置
                 .setStrategy(
@@ -46,18 +46,18 @@ public class AutoGeneratorStart {
                                 .setEntityBooleanColumnRemoveIsPrefix(true)
                                 .setRestControllerStyle(true)
                                 //.setLogicDeleteFieldName("state")
-                                .setInclude("t_vendor_log_count")
+                                .setInclude("t_mp")
                 )
                 //包配置
                 .setPackageInfo(
                         new PackageConfig()
-                                .setParent("com.bjs")
-                                .setEntity("data.po")
-                                .setService("service.service")
-                                .setServiceImpl("service.service.impl")
-                                .setMapper("data.dao")
+                                .setParent("ren.baojie")
+                                .setEntity("entity")
+                                .setService("service")
+                                .setServiceImpl("service.impl")
+                                .setMapper("dao")
                                 .setXml("mapper")
-                                .setController("web")
+                                .setController("controller")
                 )
                 //go
                 .execute();
