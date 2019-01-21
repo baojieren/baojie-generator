@@ -25,7 +25,7 @@ public class AutoGeneratorStart {
                                 .setIdType(IdType.AUTO)
                                 .setBaseColumnList(true)
                                 .setEntityName("%sPO")
-                                .setMapperName("I%sDao")
+                                .setMapperName("%sDao")
                                 //.setServiceName("%sService")
                 )
                 //数据源配置
