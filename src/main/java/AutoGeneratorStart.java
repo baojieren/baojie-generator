@@ -46,7 +46,7 @@ public class AutoGeneratorStart {
                                 .setEntityBooleanColumnRemoveIsPrefix(true)
                                 .setRestControllerStyle(true)
                                 //.setLogicDeleteFieldName("state")
-                                .setInclude("t_mp")
+                                .setInclude("t_mall_addr_backup")
                 )
                 //包配置
                 .setPackageInfo(
