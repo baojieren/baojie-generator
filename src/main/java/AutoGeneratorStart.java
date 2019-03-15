@@ -46,7 +46,7 @@ public class AutoGeneratorStart {
                                 .setEntityBooleanColumnRemoveIsPrefix(true)
                                 .setRestControllerStyle(true)
                                 //.setLogicDeleteFieldName("state")
-                                .setInclude("t_vendor_log_count")
+                                .setInclude("t_second_offer_record")
                 )
                 //包配置
                 .setPackageInfo(
