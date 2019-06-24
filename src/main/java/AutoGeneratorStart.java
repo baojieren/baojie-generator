@@ -8,16 +8,27 @@ import com.baomidou.mybatisplus.generator.config.StrategyConfig;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 
 /**
- * @author baojie
+ * @author baojieren
  */
 public class AutoGeneratorStart {
     public static void main(String[] args) {
         //代码生成器
         new AutoGenerator()
+                //表策略配置
+                .setStrategy(
+                        new StrategyConfig()
+                                .setNaming(NamingStrategy.underline_to_camel)
+                                .setTablePrefix("t_")
+                                .setEntityLombokModel(true)
+                                .setEntityBooleanColumnRemoveIsPrefix(true)
+                                .setRestControllerStyle(true)
+                                //.setLogicDeleteFieldName("state")
+                                .setInclude("t_divide_ali_contract_receiver")
+                )
                 //全局配置
                 .setGlobalConfig(
                         new GlobalConfig()
-                                .setOutputDir("D:\\generator-code")
+                                .setOutputDir("D:\\gen-code")
                                 .setFileOverride(true)
                                 .setEnableCache(false)
                                 .setAuthor("renBaoJie")
@@ -37,17 +48,6 @@ public class AutoGeneratorStart {
                                 .setDriverName("com.mysql.jdbc.Driver")
                                 .setUrl("jdbc:mysql://112.74.84.5:3306/bjs?serverTimezone=CST")
                 )
-                //表策略配置
-                .setStrategy(
-                        new StrategyConfig()
-                                .setNaming(NamingStrategy.underline_to_camel)
-                                .setTablePrefix("t_")
-                                .setEntityLombokModel(true)
-                                .setEntityBooleanColumnRemoveIsPrefix(true)
-                                .setRestControllerStyle(true)
-                                //.setLogicDeleteFieldName("state")
-                                .setInclude("t_second_offer_record")
-                )
                 //包配置
                 .setPackageInfo(
                         new PackageConfig()
@@ -61,5 +61,6 @@ public class AutoGeneratorStart {
                 )
                 //go
                 .execute();
+        // 第一次提交
     }
 }
